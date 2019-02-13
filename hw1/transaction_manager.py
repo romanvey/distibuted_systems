@@ -109,5 +109,5 @@ class TransactionManager:
             print("Error with PostgreSQL", error)
         else:
             pass
-            # for connection in self.transactions[transaction_name][0]:
-            #     self.connections[connection].tpc_commit()
+            for connection in self.transactions[transaction_name][0]:
+                self.connections[connection].tpc_commit()

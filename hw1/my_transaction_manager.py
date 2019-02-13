@@ -113,7 +113,3 @@ class TransactionManager:
         if need_rollback: self._rollback(transaction_name)
         else: self._commit(transaction_name)
         for cursor in tmp_cursors: cursor.close()
-
-
-    def run_2pc_transaction(self, transaction_name):
-        pass
