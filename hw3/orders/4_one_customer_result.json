@@ -1,0 +1,25 @@
+{ 
+    "_id" : ObjectId("5c741f30ff7d3579c04e66c1"), 
+    "order_number" : 201787.0, 
+    "date" : ISODate("2015-06-23T00:00:00.000+0000"), 
+    "total_sum" : 800.0, 
+    "customer" : {
+        "name" : "Roman", 
+        "surname" : "Vei", 
+        "phones" : [
+            9876543.0, 
+            1234567.0
+        ], 
+        "address" : "PTI, Banderi 12, Kyiv, UA"
+    }, 
+    "payment" : {
+        "card_owner" : "Roman Vei", 
+        "cardId" : 12345679.0
+    }, 
+    "order_items_id" : [
+        DBRef("items", ObjectId("5c73baa5e9e55a69af759789")), 
+        DBRef("items", ObjectId("5c73bb0fe9e55a69af75978c"))
+    ]
+}
+// ----------------------------------------------
+

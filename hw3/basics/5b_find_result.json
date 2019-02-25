@@ -1,0 +1,25 @@
+{ 
+    "_id" : ObjectId("5c73baf4e9e55a69af75978b"), 
+    "category" : "Phone", 
+    "model" : "iPhone 4", 
+    "producer" : "Apple", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb15e9e55a69af75978d"), 
+    "category" : "Phone", 
+    "model" : "Samsung S4", 
+    "producer" : "Samsung", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb7be9e55a69af759791"), 
+    "category" : "Smart Watch", 
+    "model" : "iWatch", 
+    "producer" : "Apple", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+

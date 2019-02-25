@@ -1,0 +1,24 @@
+{ 
+    "_id" : ObjectId("5c73baa5e9e55a69af759789"), 
+    "category" : "Phone", 
+    "model" : "iPhone 6", 
+    "producer" : "Apple", 
+    "price" : 600.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73baede9e55a69af75978a"), 
+    "category" : "Phone", 
+    "model" : "iPhone 5", 
+    "producer" : "Apple", 
+    "price" : 500.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73baf4e9e55a69af75978b"), 
+    "category" : "Phone", 
+    "model" : "iPhone 4", 
+    "producer" : "Apple", 
+    "price" : 400.0
+}
+// ----------------------------------------------

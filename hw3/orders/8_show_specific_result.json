@@ -1,0 +1,31 @@
+{ 
+    "customer" : {
+        "name" : "Andrii", 
+        "surname" : "Rodinov", 
+        "phones" : [
+            9876543.0, 
+            1234567.0
+        ], 
+        "address" : "PTI, Peremohy 37, Kyiv, UA"
+    }, 
+    "payment" : {
+        "cardId" : 12345678.0
+    }
+}
+// ----------------------------------------------
+{ 
+    "customer" : {
+        "name" : "Andrii", 
+        "surname" : "Rodinov", 
+        "phones" : [
+            9876543.0, 
+            1234567.0
+        ], 
+        "address" : "PTI, Peremohy 37, Kyiv, UA"
+    }, 
+    "payment" : {
+        "cardId" : 12345678.0
+    }
+}
+// ----------------------------------------------
+

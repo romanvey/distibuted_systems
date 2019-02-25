@@ -1,0 +1,49 @@
+{ 
+    "_id" : ObjectId("5c73f70e75929e7fd338f095"), 
+    "order_number" : 201777.0, 
+    "date" : ISODate("2015-06-14T00:00:00.000+0000"), 
+    "total_sum" : 1000.0, 
+    "customer" : {
+        "name" : "Andrii", 
+        "surname" : "Rodinov", 
+        "phones" : [
+            9876543.0, 
+            1234567.0
+        ], 
+        "address" : "PTI, Peremohy 37, Kyiv, UA"
+    }, 
+    "payment" : {
+        "card_owner" : "Andrii Rodionov", 
+        "cardId" : 12345678.0
+    }, 
+    "order_items_id" : [
+        DBRef("items", ObjectId("5c73baa5e9e55a69af759789")), 
+        DBRef("items", ObjectId("5c73bb7be9e55a69af759791"))
+    ]
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73f72975929e7fd338f096"), 
+    "order_number" : 201513.0, 
+    "date" : ISODate("2015-04-14T00:00:00.000+0000"), 
+    "total_sum" : 1100.0, 
+    "customer" : {
+        "name" : "Andrii", 
+        "surname" : "Rodinov", 
+        "phones" : [
+            9876543.0, 
+            1234567.0
+        ], 
+        "address" : "PTI, Peremohy 37, Kyiv, UA"
+    }, 
+    "payment" : {
+        "card_owner" : "Andrii Rodionov", 
+        "cardId" : 12345678.0
+    }, 
+    "order_items_id" : [
+        DBRef("items", ObjectId("5c73baa5e9e55a69af759789")), 
+        DBRef("items", ObjectId("5c73baede9e55a69af75978a"))
+    ]
+}
+// ----------------------------------------------
+

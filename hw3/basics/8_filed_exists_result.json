@@ -1,0 +1,19 @@
+{ 
+    "_id" : ObjectId("5c73bb38e9e55a69af75978e"), 
+    "category" : "TV", 
+    "model" : "Samsung TV 2", 
+    "producer" : "Samsung", 
+    "price" : 1000.0, 
+    "diagonal" : 40.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb41e9e55a69af75978f"), 
+    "category" : "TV", 
+    "model" : "Samsung TV", 
+    "producer" : "Samsung", 
+    "price" : 900.0, 
+    "diagonal" : 40.0
+}
+// ----------------------------------------------
+

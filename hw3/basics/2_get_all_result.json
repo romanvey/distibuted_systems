@@ -1,0 +1,73 @@
+{ 
+    "_id" : ObjectId("5c73baa5e9e55a69af759789"), 
+    "category" : "Phone", 
+    "model" : "iPhone 6", 
+    "producer" : "Apple", 
+    "price" : 600.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73baede9e55a69af75978a"), 
+    "category" : "Phone", 
+    "model" : "iPhone 5", 
+    "producer" : "Apple", 
+    "price" : 500.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73baf4e9e55a69af75978b"), 
+    "category" : "Phone", 
+    "model" : "iPhone 4", 
+    "producer" : "Apple", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb0fe9e55a69af75978c"), 
+    "category" : "Phone", 
+    "model" : "Samsung S3", 
+    "producer" : "Samsung", 
+    "price" : 200.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb15e9e55a69af75978d"), 
+    "category" : "Phone", 
+    "model" : "Samsung S4", 
+    "producer" : "Samsung", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb38e9e55a69af75978e"), 
+    "category" : "TV", 
+    "model" : "Samsung TV 2", 
+    "producer" : "Samsung", 
+    "price" : 1000.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb41e9e55a69af75978f"), 
+    "category" : "TV", 
+    "model" : "Samsung TV", 
+    "producer" : "Samsung", 
+    "price" : 900.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb69e9e55a69af759790"), 
+    "category" : "Smart Watch", 
+    "model" : "Samsung Galaxy Watch", 
+    "producer" : "Samsung", 
+    "price" : 300.0
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5c73bb7be9e55a69af759791"), 
+    "category" : "Smart Watch", 
+    "model" : "iWatch", 
+    "producer" : "Apple", 
+    "price" : 400.0
+}
+// ----------------------------------------------
+
