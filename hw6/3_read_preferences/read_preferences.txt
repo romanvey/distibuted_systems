@@ -1,0 +1,7 @@
+// Read from primary
+
+db.items.find().readPref('primary');
+
+// Read from secondary
+
+db.items.find().readPref('secondary');

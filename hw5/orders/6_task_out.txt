@@ -1,0 +1,7 @@
+ customer | total_price
+----------+-------------
+   Andrii |        2500
+     Roma |        1300
+
+(2 rows)
+

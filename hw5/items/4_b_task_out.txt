@@ -1,0 +1,6 @@
+ category | price | name    | options            | producer
+----------+-------+---------+--------------------+----------
+       TV |   900 | SmartTV | {'diagonal': '38'} |  Samsung
+
+(1 rows)
+

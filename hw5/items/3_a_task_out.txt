@@ -1,0 +1,6 @@
+ name     | category | price | options           | producer
+----------+----------+-------+-------------------+----------
+ iPhone 6 |    Phone |   600 | {'color': 'grey'} |    Apple
+
+(1 rows)
+

@@ -1,0 +1,33 @@
+
+For show difference between readConcern "local" and "majority" we can use previous example
+let`s stop secondary nodes and add inconsistent data with writeConcern: 1 and after that read this data with readConcern: "local"
+How we can see read successful with inconsistent data
+
+db.items.insert( {      
+name: "inconsistent_data",      
+amount: 3    },    
+{      writeConcern: { w: 1      }    } );
+db.items.find().readConcern("local");
+(Screenshot 1)
+Stop primary node, start two secondaries, they don`t have inconsistent data, so actually we send to user inconsistent data
+(Screenshot 2)
+__________________________________________________________
+db.items.insert( {      
+name: "inconsistent_data",      
+amount: 3    },    
+{      writeConcern: { w: 1      }    } );
+db.items.find().readConcern("majority");
+
+
+If we repeat this experiment with "majority" user doesn`t receive inconsistent data. He see only data on majority notes. (In our example last added inconsistant row wouldn`t appear)
+(Screenshot 3)
+__________________________________________________________
+db.items.insert( {      
+name: "inconsistent_data",      
+amount: 3    },    
+{      writeConcern: { w: 1      }    } );
+db.items.find().readConcern("linearizable");
+
+
+If we repeat this experiment with "linearizable" user doesn`t receive data at all. Bacause readConcern: "linearizable" would wait for acknowledgements from secondary nodes after that it realized after 10 sec that they were unavaliable and sent error message, not data
+(Screenshot 4)

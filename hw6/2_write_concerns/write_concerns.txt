@@ -1,0 +1,59 @@
+// unacknowledged
+
+db.getCollection("items").insert(
+	{ 
+    name: "carrots", 
+    amount: 15 
+   },
+   {
+     writeConcern: {
+	w: 0, 
+        j: false
+     }
+   }
+);
+
+// acknowledged
+
+db.getCollection("items").insert(
+	{ 
+    name: "potatoes", 
+    amount: 10
+   },
+   {
+     writeConcern: {
+	w: 1, 
+        j: false
+     }
+   }
+);
+
+// journaled
+
+db.getCollection("items").insert(
+	{ 
+    name: "cabbages", 
+    amount: 5
+   },
+   {
+     writeConcern: {
+	w: 1, 
+        j: true
+     }
+   }
+);
+
+// acknowledged replica
+
+db.getCollection("items").insert(
+	{ 
+    name: "onions", 
+    amount: 7
+   },
+   {
+     writeConcern: {
+	w: "majority"
+     }
+   }
+);
+

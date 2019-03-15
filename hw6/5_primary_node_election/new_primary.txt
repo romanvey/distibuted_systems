@@ -1,0 +1,32 @@
+Stop primary node:
+docker stop mongo-node1
+
+Check replica set status:
+rs.status()
+
+Add new items:
+db.getCollection("items").insert(
+	{ 
+    name: "apples", 
+    amount: 5
+   },
+   {
+     writeConcern: {
+	w: 1, 
+        j: true
+     }
+   }
+);
+
+db.getCollection("items").insert(
+	{ 
+    name: "bananas", 
+    amount: 5
+   },
+   {
+     writeConcern: {
+	w: 1, 
+        j: true
+     }
+   }
+);

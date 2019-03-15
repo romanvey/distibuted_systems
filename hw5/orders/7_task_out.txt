@@ -1,0 +1,7 @@
+ customer | max_order
+----------+-----------
+   Andrii |      1400
+     Roma |       700
+
+(2 rows)
+

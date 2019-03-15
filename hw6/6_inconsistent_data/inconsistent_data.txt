@@ -1,0 +1,60 @@
+Node1: Secondary
+Node2: Primary
+Node3: Secondary
+
+
+docker stop mongo-node1
+docker stop mongo-node3
+
+In this short time let`s insert data
+
+db.items.insert( {      
+name: "inconsistent_data",      
+amount: 3    },    
+{      writeConcern: { w: 1      }    } );
+
+Node1: Disconnected
+Node2: Primary
+Node3: Disconnected
+
+You can see result of writting operation as "ok", so data inserted into primary node
+
+Disconnect primary node
+
+docker stop mongo-node2
+
+Node1: Disconnected
+Node2: Disconnected
+Node3: Disconnected
+
+Start nodes 1 and 3
+
+docker start mongo-node1
+docker start mongo-node3
+
+Node1: Primary
+Node2: Disconnected
+Node3: Secondary
+
+Look data, we don`t have our inconsistent data there
+db.items.find();
+
+Now let`s connect previous primary node
+
+docker start mongo-node2
+
+Node1: Primary
+Node2: Secondary
+Node3: Secondary
+
+Now we lose writtten data!
+
+
+// Read from node 1 (this node doesn`t have inconsistent data)
+db.items.find().readPref("primary");
+
+// Read from node 2 (this node also doesn`t have new inconsistent data)
+db.items.find().readPref("secondary");
+
+After that this node sent  inconsistent data to node three, so all of them had inconsistent data
+After that I start first node (previous primary, which had inconsistent data) and all of them had inconsistent data

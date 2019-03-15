@@ -1,0 +1,20 @@
+Stop docker with third node:
+docker stop mongo-node3
+
+Write in mongo shell:
+// Write concern: 3 nodes and without timeout
+
+db.getCollection("items").insert(
+	{ 
+    name: "cucumbers", 
+    amount: 20
+   },
+   {
+     writeConcern: {
+	w: 3
+     }
+   }
+);
+
+Resume docker with third node:
+docker start mongo-node2

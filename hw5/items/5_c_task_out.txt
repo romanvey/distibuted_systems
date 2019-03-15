@@ -1,0 +1,13 @@
+ category    | price | name         | options                                | producer
+-------------+-------+--------------+----------------------------------------+----------
+       Phone |   200 |    Galaxy S3 |                     {'color': 'white'} |  Samsung
+       Phone |   400 |    Galaxy S4 |                     {'color': 'black'} |  Samsung
+       Phone |   500 |     iPhone 5 |                     {'color': 'black'} |    Apple
+       Phone |   600 |     iPhone 6 |                      {'color': 'grey'} |    Apple
+ Smart Watch |   300 | Galaxy Watch | {'color': 'black', 'strap': 'leather'} |  Samsung
+ Smart Watch |   400 |       iWatch | {'color': 'white', 'strap': 'leather'} |    Apple
+          TV |   900 |      SmartTV |                     {'diagonal': '41'} |  Samsung<--
+          TV |  1000 |    SmartTV 2 |                     {'diagonal': '40'} |  Samsung
+
+(8 rows)
+

@@ -1,0 +1,8 @@
+ category | price | name      | options            | producer
+----------+-------+-----------+--------------------+----------
+    Phone |   600 |  iPhone 6 |  {'color': 'grey'} |    Apple
+    Phone |   500 |  iPhone 5 | {'color': 'black'} |    Apple
+    Phone |   400 | Galaxy S4 | {'color': 'black'} |  Samsung
+    Phone |   200 | Galaxy S3 | {'color': 'white'} |  Samsung
+
+(4 rows)

@@ -1,0 +1,8 @@
+In mongo shell:
+cfg = rs.conf();
+cfg.members[0].priority = 0;
+cfg.members[0].hidden = true;
+cfg.members[0].slaveDelay = 3600;
+rs.reconfig(cfg);
+
+After that our first node doesn`t voting and have eventual consistency (1 hour), this useful for backups

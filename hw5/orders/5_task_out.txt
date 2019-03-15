@@ -1,0 +1,7 @@
+ customer | avg_price
+----------+-----------
+   Andrii |       833
+     Roma |       650
+
+(2 rows)
+

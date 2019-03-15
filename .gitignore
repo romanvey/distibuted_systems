@@ -1,8 +1,13 @@
 *.sql
 *.py
+*.zip
 
 !hw1/*
 !hw2/*
+!hw3/*
+!hw4/*
+!hw5/*
+!hw6/*
 
 **/__pycache__/
 **/.vscode/
