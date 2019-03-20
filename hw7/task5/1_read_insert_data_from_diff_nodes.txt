@@ -1,0 +1,14 @@
+docker exec -ti cas1 cqlsh
+INSERT INTO keysp_2.customers (id,firstname,lastname)
+VALUES(uuid(), 'Roman', 'Vey');
+
+docker exec -ti cas2 cqlsh
+INSERT INTO keysp_1.customers (id,firstname,lastname)
+VALUES(uuid(), 'Max', 'Go');
+
+docker exec -ti cas3 cqlsh
+INSERT INTO keysp_1.customers (id,firstname,lastname)
+VALUES(uuid(), 'Anton', 'Ford');
+
+docker exec -ti cas1 cqlsh
+SELECT * FROM keysp_1.customers;

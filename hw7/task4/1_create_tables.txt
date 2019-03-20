@@ -1,0 +1,17 @@
+Create tables:
+
+docker exec -ti cas1 cqlsh
+CREATE TABLE keysp_1.customers ( 
+   id UUID PRIMARY KEY, 
+   lastname text, 
+   firstname text );
+
+CREATE TABLE keysp_2.customers ( 
+   id UUID PRIMARY KEY, 
+   lastname text, 
+   firstname text );
+
+CREATE TABLE keysp_3.customers ( 
+   id UUID PRIMARY KEY, 
+   lastname text, 
+   firstname text );

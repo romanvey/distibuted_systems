@@ -1,0 +1,7 @@
+Read data:
+
+SELECT * FROM keysp_1.customers ;
+SELECT * FROM keysp_2.customers ;
+SELECT * FROM keysp_2.customers WHERE id=fd89278d-3dd5-4d57-a456-f4c62f6d0252;
+SELECT * FROM keysp_3.customers ;
+(Screenshot 1)

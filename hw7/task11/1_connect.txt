@@ -1,0 +1,26 @@
+Add networks:
+docker connect bridge cas1
+docker connect bridge cas2
+docker connect bridge cas2
+
+Restart docker:
+docker stop cas1
+docker stop cas2
+docker stop cas3
+docker start cas1
+docker start cas2
+docker start cas2
+
+Check data:
+docker exec -ti cas1 cqlsh
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+docker exec -ti cas2 cqlsh
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+docker exec -ti cas2 cqlsh
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+(Screenshot 1)
+
+How we can see Cassandra resolve conflicts using timestamps, it doesn`t have vector clocks, so you need to sync clocks manually.
+In our case win row with value:
+50554d6e-29bb-11e5-b345-feff819cdc9f, 'Bogdan', 'FrTwo'
+Because it was last added row

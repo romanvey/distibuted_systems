@@ -1,0 +1,8 @@
+docker exec -ti cas1 cqlsh
+
+CREATE KEYSPACE keysp_1 
+WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 };
+CREATE KEYSPACE keysp_2
+WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 2 };
+CREATE KEYSPACE keysp_3
+WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 3 };

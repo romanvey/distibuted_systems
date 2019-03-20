@@ -1,0 +1,16 @@
+Add values to tables:
+
+docker exec -ti cas1 cqlsh
+
+INSERT INTO keysp_2.customers (id,firstname,lastname)
+VALUES(uuid(), 'Roman', 'Vey');
+INSERT INTO keysp_3.customers (id,firstname,lastname)
+VALUES(uuid(), 'Roman', 'Vey');
+INSERT INTO keysp_2.customers (id,firstname,lastname)
+VALUES(uuid(), 'Max', 'Go');
+INSERT INTO keysp_3.customers (id,firstname,lastname)
+VALUES(uuid(), 'Max', 'Go');
+INSERT INTO keysp_2.customers (id,firstname,lastname)
+VALUES(uuid(), 'Anton', 'Ford');
+INSERT INTO keysp_3.customers (id,firstname,lastname)
+VALUES(uuid(), 'Anton', 'Ford');

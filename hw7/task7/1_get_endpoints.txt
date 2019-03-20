@@ -1,0 +1,3 @@
+docker exec -ti cas1 nodetool getendpoints keysp_1 customers 58e6066e-1096-4452-8bda-45017e06bf0d
+docker exec -ti cas1 nodetool getendpoints keysp_2 customers 58e6066e-1096-4452-8bda-45017e06bf0d
+docker exec -ti cas1 nodetool getendpoints keysp_3 customers 58e6066e-1096-4452-8bda-45017e06bf0d

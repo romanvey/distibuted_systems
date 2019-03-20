@@ -1,0 +1,2 @@
+docker exec -ti cas1 nodetool status
+(Screenshot 1)

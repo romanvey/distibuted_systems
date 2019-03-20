@@ -1,0 +1,21 @@
+docker disconnect bridge cas1
+docker disconnect bridge cas2
+docker disconnect bridge cas3
+
+After that we add data:
+
+docker exec -ti cas1 cqlsh
+CONSISTENCY ONE;
+INSERT INTO keysp_3.customers (id,firstname,lastname) VALUES(50554d6e-29bb-11e5-b345-feff819cdc9f, 'Bogdan', 'FrOne');
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+
+docker exec -ti cas3 cqlsh
+CONSISTENCY ONE;
+INSERT INTO keysp_3.customers (id,firstname,lastname) VALUES(50554d6e-29bb-11e5-b345-feff819cdc9f, 'Bogdan', 'FrTwo');
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+
+docker exec -ti cas2 cqlsh
+CONSISTENCY ONE;
+INSERT INTO keysp_3.customers (id,firstname,lastname) VALUES(50554d6e-29bb-11e5-b345-feff819cdc9f, 'Bogdan', 'FrThree');
+SELECT * FROM keysp_3.customers WHERE id=50554d6e-29bb-11e5-b345-feff819cdc9f;
+(Screenshot 1)

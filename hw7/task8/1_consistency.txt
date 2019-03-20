@@ -1,0 +1,54 @@
+docker pause cas3
+
+CONSISTENCY ONE;
+SELECT * FROM keysp_1.customers;
+SELECT * FROM keysp_2.customers;
+SELECT * FROM keysp_3.customers;
+
+CONSISTENCY TWO;
+SELECT * FROM keysp_1.customers;
+SELECT * FROM keysp_2.customers;
+SELECT * FROM keysp_3.customers;
+
+CONSISTENCY THREE;
+SELECT * FROM keysp_1.customers;
+SELECT * FROM keysp_2.customers;
+SELECT * FROM keysp_3.customers;
+
+CONSISTENCY TWO and QUORUM are equal for cluster size 3
+CONSISTENCY THREE and ALL are equal for cluster size 3
+
+Strong consisteny if W + R > Replication factor
+
+Replication facor 1
+Write	ONE	TWO	THREE	QUORUM	ALL
+Read
+ONE	Strong	Strong	Strong	Strong	Strong
+TWO	Strong	Strong	Strong	Strong	Strong
+THREE	Strong	Strong	Strong	Strong	Strong
+QUORUM	Strong	Strong	Strong	Strong	Strong
+ALL	Strong	Strong	Strong	Strong	Strong
+
+Replication facor 2
+Write	ONE	TWO	THREE	QUORUM	ALL
+Read
+ONE	Event	Strong	Strong	Strong	Strong
+TWO	Strong	Strong	Strong	Strong	Strong
+THREE	Strong	Strong	Strong	Strong	Strong
+QUORUM	Strong	Strong	Strong	Strong	Strong
+ALL	Strong	Strong	Strong	Strong	Strong
+
+Replication facor 3
+Write	ONE	TWO	THREE	QUORUM	ALL
+Read
+ONE	Event	Event	Strong	Event	Strong
+TWO	Event	Strong	Strong	Strong	Strong
+THREE	Strong	Strong	Strong	Strong	Strong
+QUORUM	Event	Strong	Strong	Strong	Strong
+ALL	Strong	Strong	Strong	Strong	Strong
+
+But if one node be stopped, for replica factor 1 it would be error: "NoHostAvailable:" for consistency level: ONE, TWO, THREE, QUORUM, ALL
+But if one node be stopped, for replica factor 2 it would be error: "NoHostAvailable:" for consistency level: TWO, THREE, QUORUM, ALL
+But if one node be stopped, for replica factor 3 it would be error: "NoHostAvailable:" for consistency all levels
+(Screenshot 1, 2, 3)
+For write queries same errors and rules
